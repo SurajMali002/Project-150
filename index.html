@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene scale="0.2 0.2 0.2">
+        <a-assets>
+          <img id="bg1" src="./assets/bg.jpg">
+        </a-assets>
+    <a-scene >
+    <a-sky src="#bg1"></a-sky>
+
+    <a-camera wasd-controls-enabled="true" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>      
+
+      <a-asset-item id="train-obj" src="./assets/Project-150(Train)/tinker.obj"></a-asset-item>
+      <a-asset-item id="train-mtl" src="./assets/Project-150(Train)/obj.mtl"></a-asset-item>
+      <a-asset-item id="train-gltf" src="./assets/Project-150(Train).glb"></a-asset-item>
+      
+    </a-assets>    
+    
+    <!--------------------------------------OBJ Models----------------------------------------------------------->   
+  
+    <a-entity obj-model="obj: #train-obj; mtl: #train-mtl"  position="1 0 0" rotation="-90 0 0" scale="0.1 0.1 0.1 "
+    ></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
